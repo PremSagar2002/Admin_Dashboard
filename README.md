@@ -1,36 +1,25 @@
-# Admin User Interface
+# Admin Dashboard
 
-![Admin UI](https://github.com/lakharashubham007/Admin-UI/blob/main/public/adminui.jpg?raw=true)
+Building an interface for admins to see and delete users. The users will be provided via an API. Your job is to build out a working UI.
 
-This is a user interface for admins to view and delete users in a startup. The interface retrieves user data from an API and provides various features to manage the user records.
+### These are the requirements :
 
-## Features
+1. Column titles must stand out from the entries.
+2. There should be a search bar that can filter on any property.
+3. You should be able to edit or delete rows in place.(There is no expectation of persistence. Edit and delete are expected to only happen in memory.)
+4. You need to implement pagination: Each page contains 10 rows. Buttons at the bottom allow you to jump to any page including special buttons for first page, previous page, next page and last page. Pagination must update based on search/filtering. If there are 25 records for example that match a search query, then pagination buttons should only go till 3.
+5. You should be able to select one or more rows. A selected row is highlighted with a grayish background color. Multiple selected rows can be deleted at once using the 'Delete Selected' button at the top right bin icon.
+6. Checkbox on the top left is a shortcut to select or deselect all displayed rows. This should only apply to the ten rows displayed in the current page, and not all 50 rows.
+7. Search box placeholder text should start with Search.
+8. Search icon/button should have class as search-icon OR trigger search on ENTER. Search icon/button should have class as search-icon OR trigger search on ENTER.
+9. Action element must be a button with a specific class name like edit, delete, save.
+10. Navigation elements must be a div/button, and should have class name as first-page, previous-page, next-page and last-page and page numbers should be mentioned accordingly.
+11. On clicking edit action in a row, it should be editable in the row itself.
 
-- **Column Titles:** The column titles are prominently displayed to distinguish them from the user entries.
-- **Search Bar:** A search bar is available to filter users based on any property.
-- **Edit and Delete:** Users can be edited or deleted directly within the interface. Note that these changes are only in memory and not persisted.
-- **Pagination:** Users are displayed in pages, with each page containing 10 rows. Pagination buttons allow easy navigation between pages, including options to jump to the first, previous, next, and last page. Pagination updates dynamically based on search and filtering results.
-- **Row Selection:** Users can select one or more rows by clicking the checkboxes. Selected rows are highlighted with a grayish background color. Multiple selected rows can be deleted simultaneously using the "Delete Selected" button at the bottom left.
-- **Select/Deselect All:** The checkbox at the top left corner provides a shortcut to select or deselect all rows displayed on the current page. It applies only to the 10 rows visible in the current page, not to all the rows.
 
-## Tech Stack
 
-The implementation of this user interface involves the following technologies:
 
-- HTML
-- CSS
-- JavaScript
-- React
-- Axios (for API communication)
-- React Toastify (for displaying toast messages)
 
-## Users API
-
-To retrieve the list of users and their properties, an API is provided. Here are the details:
-
-**Request Type:** GET
-
-**Endpoint:** [https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json](https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json)
 
 **Sample Response:**
 ```json
